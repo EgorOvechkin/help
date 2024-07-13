@@ -1,0 +1,28 @@
+---
+interface Props {
+	phoneNumber: string;
+    name: string;
+}
+
+const { phoneNumber, name } = Astro.props;
+---
+
+<div>
+    Любые вопросы вы можете задать по телефону: 
+    <span class="contact">
+        <a href=`tel:${phoneNumber}` class="phoneNumber">{phoneNumber}</span>,
+        {name}
+    </span>
+</div>
+
+<style>
+    .contact {
+        color: black;
+    }
+
+    .phoneNumber {
+        font-family: "Boorsok", monospace;
+        color: var(--accent);
+
+    }
+</style>

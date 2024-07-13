@@ -1,0 +1,75 @@
+---
+import Logo from './Logo.astro';
+
+interface Props {
+	title: string;
+    subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<header class="header">
+    <div class="container">
+        <div>
+            <Logo size={98} />
+        </div>
+        <div class="titleContainer">
+            <span class="title">
+                {title}
+            </span>
+            <span class="subtitle">
+                {subtitle}
+            </span>
+        </div>
+    </div>
+</header>
+
+<style>
+    .header {
+        display: flex;
+        align-items: center;
+        background: var(--accent);
+        padding: 1rem;
+    }
+
+    .container {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 35%;
+        min-width: 260px;
+    }
+
+    /* .header {
+        background: white;
+        border: 36px solid var(--accent);
+    } */
+
+    /* .container {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    } */
+
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        font-family: "Boorsok", monospace;
+        font-size: 1.5rem;
+        color: var(--accent);
+    }
+
+    .subtitle{
+        font-family: "BebasNeue", monospace;
+    }
+
+</style>

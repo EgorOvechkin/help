@@ -1,0 +1,85 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@font-face {
+		font-family: "BebasNeue" ;
+		src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+		font-weight: normal;
+  		font-style: normal;
+  		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Boorsok" ;
+		src: url("/fonts/boorsok.ttf") format("truetype");
+		font-weight: normal;
+  		font-style: normal;
+  		font-display: swap;
+	}
+
+
+
+	@font-face {
+ 		font-family: 'GothamPro_black';
+  		src: url('/fonts/gothampro_black.ttf') format('truetype');
+  		font-weight: normal;
+  		font-style: normal;
+  		font-display: swap;
+	}
+	:root {
+		/* --accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		); */
+
+		--accent: rgb(237, 130, 76);
+	}
+	html {
+		font-family: "GothamPro_black", sans-serif;
+		background: #fff;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+		
+	}
+
+
+	body {
+		margin: 0;
+	}
+</style>

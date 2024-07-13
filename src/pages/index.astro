@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Contact from '../components/Contact.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="DRA">
+	<main>
+		<Header 
+			title='DRA путь домой'
+			subtitle="вместе мы сила"
+		/>
+		<Navigation />
+		<div class="content">
+			<article>
+				<p class="paragraph">
+					Группа <span class="brand">&laquo;Путь Домой&raquo;</span> ориентирована на&nbsp;зависимых людей с&nbsp;диагнозами:
+					<br />
+					<ul>
+						<li>БАР</li>
+						<li>ШАР</li>
+						<li>ПРЛ</li>
+						<li>шизофрения</li>
+						<li>другие психоэмоциональные расстройства</li>
+					</ul>
+					<br />
+				</p>
+				<p class="paragraph">
+					Онлайн собрания проходят по вторникам в 20:00
+				</p>
+				<Contact
+					phoneNumber='89118139377'
+					name='Нина'
+				/>	
+	   		</article>
+
+			
+		</div>
+		<div class="footer"></div>
+	</main>
+
+</Layout>
+
+<style>
+	main {
+		color: #2c2a2a;
+		font-size: 20px;
+		line-height: 1.4;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		/* font-family: "BebasNeue", monospace; */
+		/* font-weight: 600; */
+	}
+
+	.brand {
+		/* font-family: "Boorsok", monospace; */
+		/* color: var(--accent); */
+	}
+
+	.content {
+		/* color: white; */
+		border: 16px solid var(--accent)
+	}
+
+	article {
+		 /* background-color: var(--accent);  */
+		 padding: 0 1rem ;
+		
+	}
+ 
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	.footer {
+		flex: 1 0 auto;
+		background-color: var(--accent);
+	}
+
+	.paragraph {
+		/* border: 1px solid rgba(var(--accent-light), 25%); */
+		/* background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%)); */
+		/* border-radius: 8px; */
+		margin: 8px 0 12px;
+	}
+
+	ul {
+		margin: 0;
+	}
+</style>

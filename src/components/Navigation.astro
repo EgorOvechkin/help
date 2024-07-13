@@ -1,0 +1,38 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+    { title: "Главная", path: "/" },
+    { title: "О нас", path: "./about" },
+    { title: "Расписание", path: "./schedule" },
+    { title: "Контакты", path: "./contacts" },
+    { title: "Литература", path: "./literature" },
+]
+---
+<nav class="navigation">
+    {
+        links.map(link => <a href={link.path} class={pathname === link.path ? "current" : ""}>{link.title}</a>)
+    }
+</nav>
+
+<style>
+    .navigation  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Boorsok", monospace;    
+        flex-wrap: wrap;
+        gap: 4px;
+        border-left: 16px solid var(--accent);
+        border-right: 16px solid var(--accent);
+        
+        a {
+            text-decoration: none;
+            color: #2c2a2a; 
+            &:hover,
+            &.current {
+                color: var(--accent);
+                text-decoration: underline;
+            }
+        }
+    }
+</style>    
