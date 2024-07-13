@@ -5,9 +5,11 @@ const links = [
     { title: "О нас", path: "./about" },
     { title: "Расписание", path: "./schedule" },
     { title: "Контакты", path: "./contacts" },
-    { title: "Литература", path: "./literature" },
+    { title: "DRA 12 шагов", path: "./dra" },
+    { title: "Спикерские", path: "./speakers" },
 ]
 ---
+
 <nav class="navigation">
     {
         links.map(link => <a href={link.path} class={pathname === link.path ? "current" : ""}>{link.title}</a>)
