@@ -1,92 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Contact from '../components/Contact.astro';
-import Navigation from '../components/Navigation.astro';
 ---
 
 <Layout title="DRA">
-	<main>
-		<Header 
-			title='DRA путь домой'
-			subtitle="вместе мы сила"
-		/>
-		<Navigation />
-		<div class="content">
-			<article>
-				<p class="paragraph">
-					Группа <span class="brand">&laquo;Путь Домой&raquo;</span> ориентирована на&nbsp;зависимых людей с&nbsp;диагнозами:
-					<br />
-					<ul>
-						<li>БАР</li>
-						<li>ШАР</li>
-						<li>ПРЛ</li>
-						<li>шизофрения</li>
-						<li>другие психоэмоциональные расстройства</li>
-					</ul>
-					<br />
-				</p>
+	<p class="paragraph">
+		Группа <span class="brand">&laquo;Путь Домой&raquo;</span> ориентирована на&nbsp;зависимых людей с&nbsp;диагнозами:
+		<br />
+		<ul>
+			<li>БАР</li>
+			<li>ШАР</li>
+			<li>ПРЛ</li>
+			<li>шизофрения</li>
+			<li>другие психоэмоциональные расстройства</li>
+		</ul>
+		<br />
+	</p>
 
-				<p class="paragraph">
-					Многие люди с двойным диагнозом смогли успешно работать по программе 12 Шагов, 
-					что значительно помогло их выздоровлению.
-				</p>
-				<p class="paragraph">	
-					В АА есть люди, достигшие душевного покоя и выздоровления 
-					с дополнительной помощью психологов, психиатров, а также медикаментов.
-					Зависимые с двойным расстройством выздоравливают!
-				</p>
-				<!-- <p class="paragraph">
-					Онлайн собрания проходят по вторникам в 20:00
-				</p> -->
-				<!-- <Contact
-					phoneNumber='89118139377'
-					name='Нина'
-				/>	 -->
-	   		</article>
-		</div>
-		<div class="footer"></div>
-	</main>
-
+	<p class="paragraph">
+		Многие люди с двойным диагнозом смогли успешно работать по программе 12 Шагов, 
+		что значительно помогло их выздоровлению.
+	</p>
+	<p class="paragraph">	
+		В АА есть люди, достигшие душевного покоя и выздоровления 
+		с дополнительной помощью психологов, психиатров, а также медикаментов.
+		Зависимые с двойным расстройством выздоравливают!
+	</p>
 </Layout>
 
-<style>
-	main {
-		color: #2c2a2a;
-		font-size: 20px;
-		line-height: 1.4;
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
-
-	.content {
-		border: 16px solid var(--accent);
-		flex: 1 0;
-	}
-
-	article {
-		padding: 0 1rem ;
-	}
- 
-	h1 {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-
-	.footer {
-		flex: 1 0 auto;
-		background-color: var(--accent);
-	}
-
-	.paragraph {
-		margin: 8px 0 12px;
-	}
-
-	ul {
-		margin: 0;
-	}
-</style>
+<style></style>

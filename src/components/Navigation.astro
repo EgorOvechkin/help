@@ -1,18 +1,23 @@
 ---
 const pathname = Astro.url.pathname;
+const removeSymbols = (path) => path.replace(/\W/g, "");
 const links = [
     { title: "Главная", path: "/" },
     { title: "О нас", path: "./about" },
     { title: "Расписание", path: "./schedule" },
     { title: "Контакты", path: "./contacts" },
-    { title: "DRA 12 шагов", path: "./dra" },
+    { title: "DRA 12 шагов", path: "./steps" },
     { title: "Спикерские", path: "./speakers" },
 ]
 ---
 
 <nav class="navigation">
     {
-        links.map(link => <a href={link.path} class={pathname === link.path ? "current" : ""}>{link.title}</a>)
+        links.map(link => {
+            return <a href={link.path} class={removeSymbols(link.path) === removeSymbols(pathname) ? "current" : ""}>
+                {link.title}
+            </a>
+        })
     }
 </nav>
 

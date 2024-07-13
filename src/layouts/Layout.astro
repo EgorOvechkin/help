@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+
 interface Props {
 	title: string;
 }
@@ -17,7 +20,20 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<Header 
+				title='DRA путь домой'
+				subtitle="вместе мы сила"
+			/>
+			<Navigation />
+			<div class="content">
+				<article>
+					<slot />
+				</article>
+			</div>
+			<div class="footer"></div>
+		</main>
+	
 	</body>
 </html>
 
@@ -78,8 +94,52 @@ const { title } = Astro.props;
 		
 	}
 
+	.paragraph {
+		margin: 8px 0 12px;
+	}
 
 	body {
+		margin: 0;
+	}
+
+	a {
+		color: var(--accent);
+	}
+</style>
+
+<style>
+	main {
+		color: #2c2a2a;
+		font-size: 20px;
+		line-height: 1.4;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	.content {
+		border: 16px solid var(--accent);
+		flex: 1 0;
+	}
+
+	article {
+		padding: 0 1rem ;
+	}
+ 
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	.footer {
+		flex: 1 0 auto;
+		background-color: var(--accent);
+	}
+
+	ul {
 		margin: 0;
 	}
 </style>
